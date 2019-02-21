@@ -1,0 +1,12 @@
+{
+	"name": "DatasetFileShare",
+	"properties": {
+		"description": "This is dataset source for C:\\Temp\\Files",
+		"linkedServiceName": {
+			"referenceName": "LS_OnPrem_FileShare1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare"
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

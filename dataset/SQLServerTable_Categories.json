@@ -1,0 +1,21 @@
+{
+	"name": "SQLServerTable_Categories",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerLocal",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"structure": [
+			{
+				"name": "ProductCategoryID ",
+				"type": "Int32"
+			},
+			{
+				"name": "Category ",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

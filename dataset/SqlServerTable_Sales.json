@@ -1,0 +1,25 @@
+{
+	"name": "SqlServerTable_Sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerLocal",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"structure": [
+			{
+				"name": "OrderDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "PurchaseOrderNumber",
+				"type": "String"
+			},
+			{
+				"name": "Amount",
+				"type": "Decimal"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

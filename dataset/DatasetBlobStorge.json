@@ -1,0 +1,15 @@
+{
+	"name": "DatasetBlobStorge",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_OnPrem_FileShare",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "files"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

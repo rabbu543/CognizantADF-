@@ -1,0 +1,16 @@
+{
+	"name": "LS_OnPrem_FileShare1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Temp\\Files",
+			"userId": "rabbu543",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmYzFiMTc3My0xNDczLTRkOTEtYWU4Ni04MzE5NDdiZDI2MDgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "RabbaniIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

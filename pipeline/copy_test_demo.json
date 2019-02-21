@@ -1,0 +1,63 @@
+{
+	"name": "copy_test_demo",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_suy",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "[dbo].[EmpDetails]"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[EmpDetails]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": "1000"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"id": "id",
+							"first_name": "first_name",
+							"last_name": "last_name",
+							"email": "email",
+							"city": "city",
+							"gender": "gender"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_suy",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_suy",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

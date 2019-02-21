@@ -1,0 +1,24 @@
+{
+	"name": "SqlServerTableLocal",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerLocal",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"structure": [
+			{
+				"name": "ProductCategory",
+				"type": "Int32"
+			},
+			{
+				"name": "Category",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[Demo].[ProcessingDetails]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

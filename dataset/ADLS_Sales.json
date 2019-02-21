@@ -1,0 +1,40 @@
+{
+	"name": "ADLS_Sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStore1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "OrderDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "PurchaseOrderNumber ",
+				"type": "String"
+			},
+			{
+				"name": "Amount ",
+				"type": "Decimal"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@concat('Sales_',item().Category,'.txt')",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
